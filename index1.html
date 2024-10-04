@@ -10,7 +10,6 @@
     
     <canvas id="barcodeCanvas" hidden></canvas>
     
-
     <br>
     <img id="barcodeImage" >
     
@@ -26,7 +25,6 @@
             if (value === "") {
                 value = "barcode-128";
             }
-            // console.log("Giá trị mã vạch: ", value);
             barcode128();
         }
 
@@ -43,6 +41,20 @@
             const barcodeImage = document.getElementById("barcodeImage");
             barcodeImage.src = canvas.toDataURL("image/png");
         }
+
+        async function pasteFromClipboard() {
+        
+            const text = await navigator.clipboard.readText();
+            if (text) {
+                document.getElementById("value-barcode").value = text;
+                value = text; 
+                barcode128(); 
+            }
+        }
+
+        window.addEventListener('focus', () => {
+            pasteFromClipboard(); 
+        });
 
         window.onload = function() {
             barcode128();
