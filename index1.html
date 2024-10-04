@@ -1,1 +1,52 @@
-<h1>Thành Phúc</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Mã Vạch</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    
+    <canvas id="barcodeCanvas" hidden></canvas>
+    
+
+    <br>
+    <img id="barcodeImage" >
+    
+    <br>
+    <label for="value-barcode">Code 128</label>
+    <input autofocus type="text" oninput="enterValue()" id="value-barcode">
+
+    <script>
+        var value = "barcode-128";
+
+        function enterValue() {
+            value = document.getElementById("value-barcode").value;
+            if (value === "") {
+                value = "barcode-128";
+            }
+            // console.log("Giá trị mã vạch: ", value);
+            barcode128();
+        }
+
+        function barcode128() {
+            const canvas = document.getElementById("barcodeCanvas");
+            JsBarcode(canvas, value, {
+                format: "CODE128",
+                lineColor: "#000000",
+                width: 2,
+                height: 70,
+                displayValue: true
+            });
+
+            const barcodeImage = document.getElementById("barcodeImage");
+            barcodeImage.src = canvas.toDataURL("image/png");
+        }
+
+        window.onload = function() {
+            barcode128();
+        };
+    </script>
+</body>
+</html>
