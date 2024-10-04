@@ -1,161 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Title</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mở Cửa Sổ Pop-up</title>
 </head>
-
 <body>
-    
-    <div class="col-8 m-auto">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
-                <i class="bi bi-card-list"></i>
-                Danh sách
-              </button>
-            </li>
-          </ul>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="card" style="border-radius: 0%;">
-                    <div class="card-header">
-                    <i class="bi bi-pencil-square"></i>
-                      Nhập lương tháng 12
-                    </div>
-                    <div class="card-body">
-                        <form class="row">
-                            <div class="mb-3 col-sm-6">
-                              <label for="exampleInputEmail1" class="form-label">Mã nhân viên</label>
-                              <input type="email" placeholder="Nhập mã nhân viên" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-        
-                            <div class="mb-3 col-sm-6">
-                              <label for="exampleInputPassword1" class="form-label">Họ và tên</label>
-                              <input type="password" placeholder="Nhập họ tên" class="form-control" id="exampleInputPassword1">
-                            </div>
-        
-                            <div class="mb-3 col-sm-6">
-                            <label for="exampleInputPassword1" class="form-label">Câu lạc bộ</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Vui lòng chọn</option>
-                                <option value="1">Hồ Chí Minh</option>
-                                <option value="2">Đà Nẵng</option>
-                                <option value="3">Hà Nội</option>
-                              </select>
-                            </div>
-        
-                            <div class="mb-3 col-sm-6">
-                                <label for="exampleInputEmail1" class="form-label">Lương</label>
-                                <input type="email"placeholder="Nhập lương cầu thủ" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                            
-                            <div class="mb-3 col-sm-6">
-                                <label for="exampleInputEmail1" class="form-label">Thưởng</label>
-                                <input type="email" placeholder="Nhập tiền thưởng" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                              </div>
-          
-                              <div class="mb-3 col-sm-6">
-                                <label for="exampleInputPassword1" class="form-label">Phụ cấp</label>
-                                <input type="password" placeholder="Nhập phụ cấp(nếu có)" class="form-control" id="exampleInputPassword1">
-                              </div>
-        
-                            <div class="mb-3 col-sm-12 ">
-                                <label for="exampleFormControlTextarea1" class="form-label">Ghi chú</label>
-                                <textarea class="form-control" placeholder="Nhập ghi chú(nếu có)" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
-                            <!-- <button type="button" class="btn btn-primary">Primary</button> -->
-                        </form>
-                        <button type="button" class="btn btn-primary">Primary</button>
-                        <button type="button" class="btn btn-primary">Primary</button>
-                    </div>
-                    <div class="card-footer text-muted">
-                      Vui lòng nhập thông tin lương cầu thủ
-                    </div>
-                  </div>
-            </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <div class="card "  style="border-radius: 0%" >
-                    <div class="card-header">
-                        <i class="bi bi-card-list"></i>
-                      BẢNG LƯƠNG THÁNG 12
-                    </div>
-                        <table class="table table-bordered table-striped table-hover text-center " style="margin-bottom: 0px;">
-                              <tr class="tieude">
-                                <th scope="col" rowspan="2" class="align-middle">Mã nhân viên</th>
-                                <th scope="col" rowspan="2" class="align-middle">Họ và tên</th>
-                                <th scope="col" colspan="3" class="align-middle">Thu nhập</th>
-                              </tr>
-                              <tr class="tieude">
-                                <th>Lương</th>
-                                <th>Thưởng</th>
-                                <th>Phụ cấp</th>
-                              </tr>
-                              <tr>
-                                <th scope="row">NV102</th>
-                                <td>Phan Em Văn Tài</td>
-                                <td>5000000</td>
-                                <td>5000000</td>
-                                <td>0</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">NV102</th>
-                                <td >Lê Huy Đức</td>
-                                <td>50000000</td>
-                                <td>50000000</td>
-                                <td>50000000</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">NV102</th>
-                                <td >Lê Huy Đức</td>
-                                <td>50000000</td>
-                                <td>50000000</td>
-                                <td>50000000</td>
-                              </tr>  
-                              <tr>
-                                <th scope="row">NV102</th>
-                                <td >Lê Huy Đức</td>
-                                <td>50000000</td>
-                                <td>50000000</td>
-                                <td>50000000</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">NV102</th>
-                                <td >Lê Huy Đức</td>
-                                <td>50000000</td>
-                                <td>50000000</td>
-                                <td>50000000</td>
-                              </tr>                
-                          </table>
-                    <div class="card-footer text-muted">
-                      Lương cầu thủ và huấn luyện viên chuyên nghiệp
-                    </div>
-                  
-            </div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">3</div>
-          </div>
-    </div>
+    <!-- Nút để mở cửa sổ pop-up -->
+    <button onclick="openPopup()">Mở Pop-up Đè</button>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
+    <script>
+        function openPopup() {
+            
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            var left = window.screenX;
+            var top = window.screenY;
+            window.open(
+                "http://127.0.0.1:5500/index1.html", 
+                "popupWindow", 
+                "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top + ",scrollbars=no"
+            );
+        }
+    </script>
 </body>
-
 </html>
